@@ -2,3 +2,13 @@
 1. ResfulRouter의 형식에 맞는 규칙을 사용함 (URL) - ex) Json-server/product/id
 같은 규칙을 사용하기 때문에 제이슨 파일안에 있는 아이디 값을 / 뒤에 사용하면 그 상품을 바로 떙겨옴
 유용함 !!
+
+
+서버 다운
+npm install -g json-server
+
+src 폴더 내에 db.json 파일 만듬
+
+
+서버 호출 
+json-server --watch db.json --port 5000 
