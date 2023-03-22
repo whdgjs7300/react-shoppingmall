@@ -4,7 +4,7 @@ import Detail from './pages/Detail';
 import Product from './pages/Product';
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 쇼핑몰 프로젝트
 // 1. 전체상품페이지, 로그인, 상세상품페이지(페이지 3개)
