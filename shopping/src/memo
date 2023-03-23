@@ -9,6 +9,6 @@ npm install -g json-server
 
 src 폴더 내에 db.json 파일 만듬
 
-
 서버 호출 
 json-server --watch db.json --port 5000 
+fffff
