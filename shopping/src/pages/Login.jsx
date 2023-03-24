@@ -1,10 +1,12 @@
+import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const Login = () => {
 
     return ( 
-        <Form>
+        <Container>
+    <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -20,10 +22,12 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <Button variant="primary" type="submit">
-        Submit
+        <Button variant="danger" type="submit">
+            로그인
         </Button>
     </Form>
+        </Container>
+        
     );
 }
 
