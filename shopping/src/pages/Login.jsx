@@ -3,10 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const Login = () => {
+    const loginUser = (e) => {
+        e.preventDefault();
+        console.log("로그인댐")
+    }
 
     return ( 
         <Container>
-    <Form>
+    <Form onSubmit={(e)=>loginUser(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
