@@ -5,7 +5,7 @@ import Product from './pages/Product';
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // 쇼핑몰 프로젝트
 // 1. 전체상품페이지, 로그인, 상세상품페이지(페이지 3개)
@@ -21,12 +21,16 @@ import { useState } from 'react';
 function App() {
   // 로그인 
   const [authenticate, setAuthenticate] = useState(false);
+  useEffect(()=>{
+    console.log(authenticate)
+  },[authenticate])
+
   return (
     <div >
       <Navbar/>
       <Routes>
         <Route path='/' element={<Product/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/login' element={<Login setAuthenticate={setAuthenticate} />}></Route>
         <Route path='/product/:id' element={<Detail/>}></Route>
       </Routes>
     </div>
