@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 const Detail = () => {
@@ -20,7 +21,18 @@ const Detail = () => {
 
     return ( 
         <div>
-            
+            <Container>
+                <Row>
+                    <Col className="product-img">
+                        <img src={product?.img} alt="" />
+                    </Col>
+
+                    <Col>
+                        <div>{product?.title}</div>
+                        <div>{product?.price}</div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
