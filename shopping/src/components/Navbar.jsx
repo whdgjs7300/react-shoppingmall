@@ -17,6 +17,14 @@ const Navbar = () => {
                         '지속가능성'
                     ]
 
+    const search = (e) => {
+        if(e.key === "Enter"){
+            let keyword = e.target.value
+            // url을 바꿔준다
+            navigate(`/?q=${keyword}`);
+        }
+    }
+
     return ( 
         <div>
             <div >
@@ -43,7 +51,7 @@ const Navbar = () => {
                     </ul>
                 <div className='search-box'>
                         <FontAwesomeIcon icon={faSearch} />
-                        <input  type="text" placeholder='제품검색' />
+                        <input onKeyPress={(e)=>search(e)} type="text" placeholder='제품검색' />
                 </div>
             </div>
 
