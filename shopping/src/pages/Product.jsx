@@ -12,7 +12,7 @@ const Product = () => {
 
     // Json-server에서 API 호출 함수
     const getProducts = async() => {
-        let searchQuery = query.get('q')
+        let searchQuery = query.get('q') || "";
         // 이렇게 실행하면 위에 함수를 읽어올 수 없음 
         // useEffect 두번째 인자값이 빈값이면 한번만 실행이됨
         let url = `http://localhost:5000/products?q=${searchQuery}`;
