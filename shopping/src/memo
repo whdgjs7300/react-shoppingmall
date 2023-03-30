@@ -12,4 +12,4 @@ src 폴더 내에 db.json 파일 만듬
 서버 호출 
 json-server --watch db.json --port 5000 
 
-비동기 이해
+비동기 이해(페이지마다 데이터 호출 함수를 통해 useEffect실행)
