@@ -1,7 +1,9 @@
 import { createStore, applyMiddleware  } from 'redux'
 import thunk from 'redux-thunk'
-import productReducer from './reducers/productReducer';
+import rootReducer from './reducers/index';
+
 // 미들웨어 적용 
-let store = createStore(productReducer, applyMiddleware(thunk));
+// 첫번째 인자값인 리듀서가 여러개일 경우 합쳐줘야함
+let store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

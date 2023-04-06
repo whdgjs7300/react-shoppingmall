@@ -8,7 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Product = () => {
     // API 호출 후 데이터는 항상 State값에 넣어둠
-    const productList = useSelector(state=>state.productList);
+    // useSelector를 사용할 때 콤바인리듀서안에 객체값을 꼭 앞에 .적어놓고 호출해야함(state)
+    const productList = useSelector(state=>state.product.productList);
     const [query, setQuery] = useSearchParams();
     const dispatch = useDispatch();
 
