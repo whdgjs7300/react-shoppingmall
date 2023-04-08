@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { productAction } from "../redux/actions/productAction";
 
 const Detail = () => {
     const {id} = useParams();
-    const [product, setProduct] =useState(null);
+    let productList = useSelector(state=>state.product.selectedItem);
+    const dispatch = useDispatch();
 
     const getProductDetail = async () => {
-        let url = `http://localhost:5000/products/${id}`;
-        let response = await fetch(url);
-        let data = await response.json();
-        setProduct(data);
+        dispatch(productAction.getDetailProducts(id))
     }
 
     // 상세 api 호출
@@ -24,12 +24,12 @@ const Detail = () => {
             <Container>
                 <Row>
                     <Col className="product-img">
-                        <img src={product?.img} alt="" />
+                        <img src={productList?.img} alt="" />
                     </Col>
 
                     <Col>
-                        <div>{product?.title}</div>
-                        <div>{product?.price}</div>
+                        <div>{productList?.title}</div>
+                        <div>{productList?.price}</div>
                     </Col>
                 </Row>
             </Container>

@@ -10,5 +10,17 @@ function getProducts(searchQuery) {
         dispatch({type : "GET_PRODUCT_SUCCESS", payload :{data}})
     }
 }
+
+function getDetailProducts(id) {
+    return async(dispatch, getState)=> {
+        let url = `http://localhost:5000/products/${id}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        dispatch({type: "GET_DETAIL_SUCCESS", payload : {data}})
+    }
+    
+        
+}
+
 //여러개의 함수를 보낼거기 떄문에 객체로 설정
-export const productAction= {getProducts}
+export const productAction= {getProducts, getDetailProducts}
