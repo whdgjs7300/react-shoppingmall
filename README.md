@@ -1,5 +1,13 @@
 # React-shoppingmall(H&M)
- MiniProject 
+ MiniProject
+ 
+ 
+ <img width="800" alt="스크린샷 2023-05-29 오전 12 13 00" src="https://github.com/whdgjs7300/react-shoppingmall/assets/112137464/4655d32f-c809-4763-963f-3ce719c6fcb1">
+<img width="800" alt="스크린샷 2023-05-29 오전 12 13 46" src="https://github.com/whdgjs7300/react-shoppingmall/assets/112137464/2d8b2cf7-a06f-4df9-a936-8d14425f108c">
+
+ 
+
+ 
 # 사용 기술
 
  <div>
